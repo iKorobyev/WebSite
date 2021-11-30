@@ -1,9 +1,8 @@
 import { Link } from 'gatsby'
-import React, { memo } from 'react'
+import React, {memo, useCallback, useState} from 'react'
 import { useSiteMetadata } from '~hooks'
-import { Button } from '~ui'
-import * as Icon from '~svg'
-import { useLocation } from '@reach/router'
+import {Container, LoginModal, RegisterModal} from "~ui";
+import {Modal} from "~ux";
 
 
 export interface HeaderProps {
@@ -12,37 +11,45 @@ export interface HeaderProps {
 const Header: React.FC<HeaderProps> = props => {
   const {} = props
 
-  const location = useLocation()
-
   const { navigation } = useSiteMetadata()
-
-  if (location.pathname === '/') return null
+  const [isOpen, setIsOpen] = useState(false)
+  const [isOpenRegisterModal, setIsOpenRegisterModal] = useState(false)
+  const token = localStorage.getItem('token')
 
   return (
-    <header className='bg-neutral-14 fixed w-full py-40'>
-      <div className='container'>
-        <nav className='max-w-7xl mx-auto px-130' aria-label='Top'>
-          <div className='flex gap-x-7% items-center justify-center'>
+    <header className='bg-[#FFD300] fixed w-full py-20'>
+      <Container>
+        <nav className='max-w-full mx-auto px-30' aria-label='Top'>
+          <div className='flex items-center justify-between'>
             {navigation.map(link => {
-              if (link.path === '/') return <Link
-                key={link.label}
-                to={link.path}
-                className='mx-13%'
-              >
-                <Icon.Logo />
-              </Link>
-
               return <Link
-                key={link.label}
                 to={link.path}
-                className='min-w-fit text-white hover:text-green-200'
+                key={link.label}
+                className='min-w-fit text-17 text-[#000001] hover:text-[#2D333F]'
               >
                 {link.label}
               </Link>
             })}
+            <div className="flex gap-x-15">
+              {!token && <>
+                <div className="min-w-fit text-17 text-[#000001] cursor-pointer hover:text-[#2D333F]" onClick={() => setIsOpenRegisterModal(true)}>
+                  Зарегистрироваться
+                </div>
+                <div className="min-w-fit text-17 text-[#000001] cursor-pointer hover:text-[#2D333F]" onClick={() => setIsOpen(true)}>
+                  Авторизироваться
+                </div>
+              </> || <div className="min-w-fit text-17 text-[#000001] cursor-pointer hover:text-[#2D333F]" onClick={() => {
+                localStorage.removeItem('token')
+                window.location.reload()
+              }}>
+                Выйти
+              </div>}
+            </div>
           </div>
         </nav>
-      </div>
+      </Container>
+      <LoginModal isOpen={isOpen} setIsOpen={setIsOpen} />
+      <RegisterModal isOpenRegisterModal={isOpenRegisterModal} setIsOpenRegisterModal={setIsOpenRegisterModal} />
     </header>
   )
 }

@@ -6,7 +6,7 @@ const array = max => new Array(max).fill(0).map((_, index) => index)
 const pxToRem = px => px / rem + 'rem'
 
 const spacing = array(300).reduce((acc, spacing) => ({ ...acc, [spacing]: pxToRem(spacing) }), {})
-const borderRadius = array(30).reduce((acc, borderRadius) => ({ ...acc, [borderRadius]: pxToRem(borderRadius) }), {})
+const borderRadius = array(40).reduce((acc, borderRadius) => ({ ...acc, [borderRadius]: pxToRem(borderRadius) }), {})
 const fontSize = array(100).reduce((acc, fontSize) => ({ ...acc, [fontSize]: pxToRem(fontSize) }), {})
 const lineHeight = array(100).reduce((acc, lineHeight) => ({ ...acc, [lineHeight]: pxToRem(lineHeight) }), {})
 
@@ -21,6 +21,7 @@ const defaultValues = {
   '66%': '66.666%',
   '75%': '75%',
   '100%': '100%',
+  full: '100%',
   inherit: 'inherit',
   auto: 'auto',
   fit: 'fit-content'
@@ -99,6 +100,7 @@ module.exports = {
         'sign-in-page-layout': 'url("/images/sign-in-page-layout.png")',
         'sign-up-page-layout': 'url("/images/sign-up-page-layout.png")',
         'modal': 'url("/images/modal/modal.png")',
+        'bg' : 'url("/images/bg.jpg")'
       }),
       gridTemplateColumns: {
         '7x32': 'repeat(7, 32px)'

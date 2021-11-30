@@ -29,7 +29,7 @@ const Modal: React.FC<ModalProps> = props => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
             className={cls(
-              `absolute-center shadow-MODAL z-30 min-w-[837px] min-h-[470px] overflow-hidden bg-[#F5F5F5]`,
+              `absolute-center shadow-MODAL z-30 bg-[#5A6593] overflow-hidden border-[5px] border-[#FFD300]`,
               className
             )}
             tabIndex={1}

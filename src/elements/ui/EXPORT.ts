@@ -10,8 +10,9 @@ export const Select = loadable(() => import('./Select'))
 export const DateTimeSelect = loadable(() => import('./DateTimeSelect'))
 export const MultiSelect = loadable(() => import('./MultiSelect'))
 export const Autocomplete = loadable(() => import('./Autocomplete'))
-export const ContextMenu = loadable(() => import('./ContextMenu'))
-export const SubscribeModal = loadable(() => import('./SubscribeModal'))
+export const Container = loadable(() => import('./Container'))
+export const LoginModal = loadable(() => import('./LoginModal'))
+export const RegisterModal = loadable(() => import('./RegisterModal'))
 
 export const Table = loadable(() => import('./Table/Table'))
 export const DatePicker = loadable(() => import('./DatePicker/DatePicker'))
@@ -27,8 +28,9 @@ export * from './Select'
 export * from './DateTimeSelect'
 export * from './MultiSelect'
 export * from './Autocomplete'
-export * from './ContextMenu'
-export * from './SubscribeModal'
+export * from './Container'
+export * from './LoginModal'
+export * from './RegisterModal'
 
 
 export * from './Table/Table'

@@ -8,7 +8,7 @@ import React from 'react'
 import { ApolloProvider } from '@apollo/client'
 import { Provider as AlertProvider, transitions } from 'react-alert'
 import { PageLayout } from '~layouts'
-import { Header, Footer } from '~sections'
+import { Header } from '~sections'
 import { Alert } from '~ux'
 import client from './gatsby-apollo'
 import '~styles/app.css'
@@ -21,7 +21,6 @@ export const wrapPageElement = ({ element: page, props }) => {
     <div className='flex flex-col min-h-screen text-white font-sans'>
       <Header />
       <PageLayout {...props}>{page}</PageLayout>
-      <Footer />
     </div>
   )
 }

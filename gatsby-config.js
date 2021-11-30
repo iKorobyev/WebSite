@@ -5,16 +5,13 @@ module.exports = {
     author: `Igor Korobyev <iKorobyev@gmail.com>`,
     navigation: [
       {
-        path: '/home',
-        label: 'Home',
+        path: '/',
+        label: 'Главная',
         icon: ''
-      },
+      }
     ]
   },
   flags: {
-    /*  PRESERVE_WEBPACK_CACHE: true,
-    PRESERVE_FILE_DOWNLOAD_CACHE: true,
-    PARALLEL_SOURCING: true,*/
     FAST_DEV: true
   },
   plugins: [
