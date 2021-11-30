@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["dom", "esnext"],
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "noUnusedLocals": false,
+    "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "~hooks": ["src/hooks/EXPORT.ts"],
+      "~hocs": ["src/hocs/EXPORT.ts"],
+
+      "~graphql": ["src/graphql/EXPORT.ts"],
+      "~fragments": ["src/graphql/fragments/EXPORT.ts"],
+
+      "~layouts": ["src/components/layouts/EXPORT.ts"],
+      "~sections": ["src/components/sections/EXPORT.ts"],
+      "~seo": ["src/components/seo/EXPORT.ts"],
+
+      "~svg": ["src/elements/svg/EXPORT.tsx"],
+      "~ui": ["src/elements/ui/EXPORT.ts"],
+      "~ux": ["src/elements/ux/EXPORT.ts"],
+
+      "~images/*": ["static/images/*"],
+      "~styles/*": ["static/styles/*"],
+
+      "~types": ["src/types/EXPORT.ts"],
+      "~utils": ["src/utils/EXPORT.ts"]
+    },
+    "typeRoots": ["./node_modules/@types", "./@types"]
+  },
+  "exclude": ["node_modules", "static", "public", ".cache"]
+}
