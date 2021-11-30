@@ -11,7 +11,7 @@ const IndexPage: FC<IndexPageProps> = () => {
   const [isDisable, setIsDisable] = useState(true)
 
   useEffect(() => {
-    const token = localStorage.getItem('token')
+    const token = localStorage.getItem('token');
     if (token) setIsDisable(false)
   })
 
