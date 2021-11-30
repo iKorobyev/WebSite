@@ -11,8 +11,6 @@ export const LayoutDrawer = loadable(() => import('./LayoutDrawer'))
 export const Loader = loadable(() => import('./Loader'))
 
 export const Form = loadable(() => import('./Form'))
-// export const SubscribeFormModal = loadable(() => import('./SubscribeFormModal'))
-export const  SubscribeFormModal = loadable(()=> import('./SubscribeFormModal'))
 export const LabelField = loadable(() => import('./LabelField'))
 export const FormField = loadable(() => import('./FormField'))
 export const Modal = loadable(() => import('./Modal'))
@@ -28,6 +26,5 @@ export * from './Popover'
 export * from './Drawer'
 export * from './LayoutDrawer'
 export * from './Loader'
-export * from './SubscribeFormModal'
 export * from './Form'
 export * from './FormField'
