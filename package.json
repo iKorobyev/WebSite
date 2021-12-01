@@ -82,7 +82,7 @@
   "scripts": {
     "build": "gatsby build",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "node server.js",
+    "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "server": "node server.js",
