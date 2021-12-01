@@ -11,6 +11,12 @@
       "password": "$2a$10$KQ4zTp8PeWI7zXt43CroKejRNIX5N3bvyB6MtsI9hF.ajzqaZkFLy",
       "username": "igor",
       "id": "2TZ0OGr"
+    },
+    {
+      "email": "root@root",
+      "password": "$2a$10$zJPZb4tBXrZQcHgKSKEYlu2vjH0lQcIW9OAqyAU.NkwSUA2shNx7y",
+      "username": "root",
+      "id": "RVZ5cwh"
     }
   ],
   "developers": [

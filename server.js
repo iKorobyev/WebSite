@@ -23,6 +23,7 @@ const jsonServer = require('json-server');
 const auth = require('json-server-auth')
 const server = jsonServer.create();
 const router = jsonServer.router('./db.json');
+const { createProxyMiddleware } = require('http-proxy-middleware')
 const middlewares = jsonServer.defaults({
   static: './build',
 });
@@ -34,6 +35,7 @@ server.db = router.db
 server.use(middlewares);
 server.use(auth);
 server.use(router);
+server.use('/api', createProxyMiddleware({ target: 'http://localhost:3000', changeOrigin: true }))
 
 server.listen(PORT, () => {
   console.log('Server is running');
