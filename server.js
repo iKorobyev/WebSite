@@ -35,7 +35,7 @@ server.db = router.db
 server.use(middlewares);
 server.use(auth);
 server.use(router);
-server.use('/', createProxyMiddleware({ target: `http://localhost:3000`, changeOrigin: true }))
+server.use('/api', createProxyMiddleware({ target: `http://localhost:3000`, changeOrigin: true }))
 
 server.listen(PORT, () => {
   console.log('Server is running');
