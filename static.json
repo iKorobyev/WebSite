@@ -1,5 +1,6 @@
 {
   "root": "public/",
+  "canonical_host": "https://dstu-website-frontend.herokuapp.com/",
   "headers": {
     "/**": {
       "Cache-Control": "public, max-age=0, must-revalidate"
