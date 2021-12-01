@@ -5,30 +5,6 @@
       "email": "test@gmail.com",
       "password": "admin",
       "username": "admin"
-    },
-    {
-      "email": "igor@igor",
-      "password": "$2a$10$KQ4zTp8PeWI7zXt43CroKejRNIX5N3bvyB6MtsI9hF.ajzqaZkFLy",
-      "username": "igor",
-      "id": "2TZ0OGr"
-    },
-    {
-      "email": "root@root",
-      "password": "$2a$10$zJPZb4tBXrZQcHgKSKEYlu2vjH0lQcIW9OAqyAU.NkwSUA2shNx7y",
-      "username": "root",
-      "id": "RVZ5cwh"
-    },
-    {
-      "email": "admin@admin",
-      "password": "$2a$10$BrtlXHJey8xkkZU56HGa3O5DaLGbjnNOyvKfgB47WizQFtDMYpcFq",
-      "username": "admin",
-      "id": "t5Hq6RD"
-    },
-    {
-      "email": "lolo@lolo",
-      "password": "$2a$10$KA/Wams8qtt7V6geKUzdMuxuP1KwEJfjo6R71E0ZiVgzI.ax8GToW",
-      "username": "lolo",
-      "id": "yhwji94"
     }
   ],
   "developers": [
