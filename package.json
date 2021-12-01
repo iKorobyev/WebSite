@@ -80,7 +80,7 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby cleann && gatsby build",
+    "build": "gatsby clean && gatsby build",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",
