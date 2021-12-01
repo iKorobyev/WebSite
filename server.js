@@ -13,3 +13,10 @@ server.use(router);
 server.listen(PORT, () => {
   console.log('Server is running');
 });
+
+const proxy = require('http-proxy-middleware')
+
+module.exports = function(app) {
+  // add other server routes to path array
+  app.use(proxy(['/api' ], { target: 'http://localhost:3000' }));
+}
