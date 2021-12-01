@@ -1,25 +1,40 @@
-const jsonServer = require('json-server')
-const auth = require('json-server-auth')
+// const jsonServer = require('json-server')
+// const auth = require('json-server-auth')
+// const { createProxyMiddleware } = require('http-proxy-middleware')
+//
+// const app = jsonServer.create()
+// const router = jsonServer.router('./db.json')
+//
+// const PORT = process.env.PORT || 3000;
+//
+// // /!\ Bind the router db to the app
+// app.db = router.db
+//
+// // You must apply the auth middleware before the router
+// app.use(auth)
+// app.use(router)
+// app.use('/api', createProxyMiddleware({ target: 'http://localhost:3000', changeOrigin: true }))
+//
+// app.listen(PORT, () => {
+//   console.log('Server is running');
+// });
 
-const app = jsonServer.create()
-const router = jsonServer.router('db.json')
+const jsonServer = require('json-server');
+const auth = require('json-server-auth')
+const server = jsonServer.create();
+const router = jsonServer.router('./db.json');
+const middlewares = jsonServer.defaults({
+  static: './build',
+});
 
 const PORT = process.env.PORT || 3000;
 
-// /!\ Bind the router db to the app
-app.db = router.db
+server.db = router.db
 
-// You must apply the auth middleware before the router
-app.use(auth)
-app.use(router)
+server.use(middlewares);
+server.use(auth);
+server.use(router);
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log('Server is running');
 });
-
-const proxy = require('http-proxy-middleware')
-
-module.exports = function(app) {
-  // add other server routes to path array
-  app.use(proxy(['/api' ], { target: 'http://localhost:3000' }));
-}

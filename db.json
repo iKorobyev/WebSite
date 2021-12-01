@@ -5,6 +5,12 @@
       "email": "test@gmail.com",
       "password": "admin",
       "username": "admin"
+    },
+    {
+      "email": "igor@igor",
+      "password": "$2a$10$KQ4zTp8PeWI7zXt43CroKejRNIX5N3bvyB6MtsI9hF.ajzqaZkFLy",
+      "username": "igor",
+      "id": "2TZ0OGr"
     }
   ],
   "developers": [
