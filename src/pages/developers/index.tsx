@@ -21,13 +21,17 @@ export interface IDeveloper {
 
 const DevelopersPage: FC<DevelopersPageProps> = ({}) => {
   const [developers, setDevelopers] = useState<IDeveloper[]>([])
-  const token = localStorage.getItem('token')
+  const [token, setToken] = useState<null | string>('')
 
   const fetchDevelopers = useCallback(async () => {
     const response = await axios.get('http://localhost:3000/developers')
     const { data } = response
     setDevelopers(data)
   }, [])
+
+  useEffect(() => {
+    localStorage.getItem('token') && setToken(localStorage.getItem('token'))
+  }, [token])
 
   useEffect(() => {
     fetchDevelopers();
