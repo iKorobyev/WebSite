@@ -18,6 +18,7 @@ const RegisterModal: FC<RegisterModalProps> = ({isOpenRegisterModal, setIsOpenRe
       "password": password,
       "username": username
     })
+    console.log('Создалось')
   }, [email, password, username])
 
   return (

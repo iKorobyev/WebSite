@@ -22,6 +22,7 @@ const LoginModal: FC<LoginModalProps> = ({isOpen, setIsOpen}) => {
       localStorage.setItem('token', response.data.accessToken)
       window.location.reload()
     }
+    console.log(response.data)
   }, [email, password])
 
   return (
